@@ -9,10 +9,5 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class Controller extends BaseController
 {
-  public function login(){
-    return view('login');
-  }
-  public function perfis(){
-    return view('perfis');
-   }
+    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 }

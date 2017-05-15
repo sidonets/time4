@@ -18,13 +18,6 @@ Route::group(['prefix' => 'ppc'], function(){
   return redirect('ppc/listar');
 });
 
-route::get('/', 'Controller@login');
-Route::get('/perfis', 'Controller@perfis');
-Route::group(['prefix' => 'disciplina'], function(){
-  route::get('/', 'DisciplinaController@criar');
-  route::get('criar', 'DisciplinaController@criar');
-  route::get('/listar', array('uses'=>'DisciplinaController@listar'));
-  route::get('salvar', 'DisciplinaController@salvar');
-  route::get('editar', 'DisciplinaController@editar');
-  route::get('excluir', 'DisciplinaController@excluir');
+Route::get('/', function () {
+    return view('welcome');
 });
